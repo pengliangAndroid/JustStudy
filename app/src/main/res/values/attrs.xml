@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="View1">
+        <attr name="view_text" format="string"/>
+        <attr name="view_width" format="dimension"/>
+        <attr name="view_color" format="color"/>
+        <attr name="view_bg" format="reference"/>
+        <attr name="visibility">
+            <!-- Visible on screen; the default value. -->
+            <enum name="visible" value="0" />
+            <!-- Not displayed, but taken into account during layout (space is left for it). -->
+            <enum name="invisible" value="1" />
+            <!-- Completely hidden, as if the view had not been added. -->
+            <enum name="gone" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

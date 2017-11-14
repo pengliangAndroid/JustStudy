@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    tools:context="com.wstro.client.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_add"
+            android:text="加法"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn_sub"
+            android:text="减法"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+   <LinearLayout
+       android:visibility="gone"
+       android:orientation="vertical"
+       android:gravity="center_horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <Button
+           android:id="@+id/btn_insert"
+           android:text="插入"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+       <Button
+           android:layout_marginTop="10dp"
+           android:id="@+id/btn_query"
+           android:text="查询"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+       <Button
+           android:layout_marginTop="10dp"
+           android:id="@+id/btn_update"
+           android:text="更新"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+       <Button
+           android:layout_marginTop="10dp"
+           android:id="@+id/btn_delete"
+           android:text="删除"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+
+   </LinearLayout>
+</LinearLayout>
