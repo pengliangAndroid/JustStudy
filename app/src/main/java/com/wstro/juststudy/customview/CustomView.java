@@ -4,9 +4,12 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.wstro.juststudy.utils.LogUtils;
 
 /**
  * ClassName: CustomView
@@ -34,6 +37,8 @@ public class CustomView extends View {
         mPaint.setColor(Color.GRAY);
         mPaint.setStyle(Paint.Style.FILL);
         mPaint.setStrokeWidth(10);
+
+
     }
 
 
@@ -43,6 +48,7 @@ public class CustomView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+        LogUtils.d("isHardwareAccelerated:"+canvas.isHardwareAccelerated());
         //绘制颜色
         //canvas.drawColor(Color.BLUE);
 
@@ -90,11 +96,34 @@ public class CustomView extends View {
 
 
         //绘制圆弧
-        RectF rectF = new RectF(150,150,550,350);
-        canvas.drawRect(rectF,mPaint);
+        //RectF rectF = new RectF(150,150,550,350);
+        //canvas.drawRect(rectF,mPaint);
 
-        mPaint.setColor(Color.BLUE);
+        //mPaint.setColor(Color.BLUE);
         //canvas.drawArc(rectF,0,120,false,mPaint);
-        canvas.drawArc(rectF,0,120,true,mPaint);
+        //canvas.drawArc(rectF,0,120,true,mPaint);
+
+        //canvas.drawText("Android",200,300,mPaint);
+
+        mPaint.setStyle(Paint.Style.STROKE);
+        //path使用
+        Path path = new Path();
+        //path.moveTo(100,100);
+
+       /* path.lineTo(200,100);
+
+        path.lineTo(200,200);
+
+        path.lineTo(100,100);*/
+
+
+        //path.lineTo(200,200);
+        /*path.setLastPoint(200,100);
+        path.lineTo(200,0);*/
+        path.lineTo(200,270);
+        path.addArc(new RectF(200,200,400,400),0,270);
+
+        //path.close();
+        canvas.drawPath(path,mPaint);
     }
 }
